@@ -1,0 +1,178 @@
+.about-content {
+  padding: 1.8rem 0 2.2rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.4fr);
+  gap: 1.6rem;
+  align-items: stretch;
+}
+
+.about-intro p {
+  font-size: 0.96rem;
+  color: var(--color-muted);
+}
+
+.about-intro p + p {
+  margin-top: 0.5rem;
+}
+
+.about-facts h3 {
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+}
+
+.about-facts ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.about-facts li {
+  color: var(--color-muted);
+}
+
+.about-goals {
+  padding: 0.5rem 0 2.5rem;
+}
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.goals-grid h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.goals-grid p {
+  color: var(--color-muted);
+  font-size: 0.94rem;
+}
+
+.goals-list {
+  list-style: disc;
+  padding-left: 1.1rem;
+  margin: 0.2rem 0 0;
+  color: var(--color-muted);
+  font-size: 0.94rem;
+}
+
+.about-showcase {
+  padding: 0.4rem 0 3rem;
+}
+
+.about-showcase .projects-intro {
+  max-width: 620px;
+  margin-bottom: 1.8rem;
+  font-size: 0.96rem;
+  color: var(--color-muted);
+}
+
+.about-showcase .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.about-showcase .project-card {
+  display: grid;
+  grid-template-columns: 1.4fr 2fr;
+  gap: 0;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  overflow: hidden;
+  background: radial-gradient(circle at top, rgba(148, 163, 184, 0.2), rgba(15, 23, 42, 0.97));
+  box-shadow: var(--shadow-soft);
+}
+
+.about-showcase .project-thumb {
+  min-height: 150px;
+  background-size: cover;
+  background-position: center;
+}
+
+.about-showcase .thumb-villa {
+  background-image: url("https://images.unsplash.com/photo-1600585154340-0ef3c08c0632?auto=format&fit=crop&w=1200&q=80");
+}
+
+.about-showcase .thumb-apartments {
+  background-image: url("https://images.unsplash.com/photo-1502673530728-f79b4cab31b1?auto=format&fit=crop&w=1200&q=80");
+}
+
+.about-showcase .thumb-office {
+  background-image: url("https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1200&q=80");
+}
+
+.about-showcase .thumb-showroom {
+  background-image: url("https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1200&q=80");
+}
+
+.about-showcase .thumb-school {
+  background-image: url("https://images.unsplash.com/photo-1523059623039-a9ed027e7fad?auto=format&fit=crop&w=1200&q=80");
+}
+
+.about-showcase .thumb-hospital {
+  background-image: url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1200&q=80");
+}
+
+.about-showcase .thumb-road {
+  background-image: url("https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=1200&q=80");
+}
+
+.about-showcase .thumb-industrial {
+  background-image: url("https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80");
+}
+
+.about-showcase .project-content {
+  padding: 1rem 1.2rem 1.1rem;
+}
+
+.about-showcase .project-content h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+}
+
+.about-showcase .project-content p {
+  margin: 0;
+  font-size: 0.93rem;
+  color: var(--color-muted);
+}
+
+.about-showcase .project-content p + p {
+  margin-top: 0.4rem;
+}
+
+.about-showcase .project-meta {
+  font-size: 0.86rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #e5e7eb;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .goals-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .about-showcase .projects-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .goals-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .about-showcase .project-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
