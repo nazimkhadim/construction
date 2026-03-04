@@ -1,12 +1,17 @@
 /* Reusable components */
 
 /* ========== Navbar – transparent, fixed, mobile-responsive ========== */
+:root {
+  --header-height: 72px;
+}
+
 .site-header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
+  min-height: var(--header-height);
   transition: background-color 0.35s ease, backdrop-filter 0.35s ease, box-shadow 0.35s ease;
 }
 
@@ -116,12 +121,22 @@
   border-radius: 8px;
   cursor: pointer;
   gap: 5px;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease;
   color: #fff;
 }
 
 .navbar-toggler:hover {
   background: rgba(255, 255, 255, 0.12);
+}
+
+.navbar-toggler[aria-expanded="true"] {
+  background: rgba(18, 22, 28, 0.95);
+  color: #e8b86d;
+}
+
+.navbar-toggler[aria-expanded="true"]:hover {
+  background: rgba(28, 34, 42, 0.98);
+  color: #f0c97a;
 }
 
 .navbar-toggler:focus-visible {
@@ -150,10 +165,30 @@
   transition: transform 0.3s ease, opacity 0.2s ease;
 }
 
+/* Mobile overlay – click to close menu */
+.navbar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.navbar-overlay.is-open {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
   .navbar-toggler {
     display: flex;
+    position: relative;
+    z-index: 1003;
   }
 
   .navbar-menu {
@@ -162,6 +197,7 @@
     right: 0;
     bottom: 0;
     width: min(320px, 85vw);
+    z-index: 1002;
     flex-direction: column;
     align-items: stretch;
     padding: 5rem 1.5rem 1.5rem;
@@ -193,11 +229,11 @@
 
 /* Body padding so content isn’t under fixed navbar */
 body {
-  padding-top: 60px;
+  padding-top: var(--header-height);
 }
 
 @media (max-width: 768px) {
-  body {
-    padding-top: 56px;
+  :root {
+    --header-height: 64px;
   }
 }
