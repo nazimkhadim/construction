@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SolidBuild Construction | Home</title>
+  <title>Rendelco Construction | Home</title>
   <link rel="stylesheet" href="../assets/css/base.css" />
   <link rel="stylesheet" href="../assets/css/layout.css" />
   <link rel="stylesheet" href="../assets/css/components.css" />
@@ -13,7 +13,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <div class="logo">
-        <a href="index.html">Solid<span>Build</span></a>
+        <a href="index.html">Rendel<span>co</span></a>
       </div>
       <nav class="main-nav">
         <a href="index.html" class="active">Home</a>
@@ -26,12 +26,12 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero reveal">
       <div class="container hero-inner">
         <div class="hero-text">
           <h1>We Build Strong Foundations For Your Future</h1>
           <p>
-            SolidBuild Construction delivers high‑quality residential,
+            Rendelco Construction delivers high‑quality residential,
             commercial, and infrastructure projects on time and on budget.
           </p>
           <div class="hero-actions">
@@ -51,11 +51,11 @@
 
     <section class="home-services">
       <div class="container">
-        <header class="section-header">
+        <header class="section-header reveal">
           <h2>Core Construction Services</h2>
           <p>From early design to project completion, we cover it all.</p>
         </header>
-        <div class="grid-3">
+        <div class="grid-3 reveal-stagger">
           <article class="card service-card">
             <h3>Residential Construction</h3>
             <p>
@@ -80,13 +80,99 @@
       </div>
     </section>
 
+    <section class="home-gallery">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2>Construction In Action</h2>
+          <p>Demo images showcasing planning, building, and finishing work.</p>
+        </header>
+        <div class="gallery-grid reveal-stagger">
+          <figure class="gallery-item wide">
+            <a
+              class="gallery-link"
+              href="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=2400&q=80"
+              target="_blank"
+              rel="noopener"
+              aria-label="Open large view: Tower crane and active construction site"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1600&q=70"
+                alt="Tower crane and active construction site"
+                loading="lazy"
+              />
+            </a>
+          </figure>
+          <figure class="gallery-item tall">
+            <a
+              class="gallery-link"
+              href="https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&w=2400&q=80"
+              target="_blank"
+              rel="noopener"
+              aria-label="Open large view: Steel structure framework under construction"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&w=1200&q=70"
+                alt="Steel structure framework under construction"
+                loading="lazy"
+              />
+            </a>
+          </figure>
+          <figure class="gallery-item small">
+            <a
+              class="gallery-link"
+              href="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=2400&q=80"
+              target="_blank"
+              rel="noopener"
+              aria-label="Open large view: Engineer reviewing site plans"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=70"
+                alt="Engineer reviewing site plans"
+                loading="lazy"
+              />
+            </a>
+          </figure>
+          <figure class="gallery-item small">
+            <a
+              class="gallery-link"
+              href="https://images.unsplash.com/photo-1519750783826-e2420f4d687f?auto=format&fit=crop&w=2400&q=80"
+              target="_blank"
+              rel="noopener"
+              aria-label="Open large view: Concrete pouring during foundation work"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1519750783826-e2420f4d687f?auto=format&fit=crop&w=1200&q=70"
+                alt="Concrete pouring during foundation work"
+                loading="lazy"
+              />
+            </a>
+          </figure>
+          <figure class="gallery-item small">
+            <a
+              class="gallery-link"
+              href="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=2400&q=80"
+              target="_blank"
+              rel="noopener"
+              aria-label="Open large view: Interior finishing and renovation work"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1200&q=70"
+                alt="Interior finishing and renovation work"
+                loading="lazy"
+              />
+            </a>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <section class="home-projects">
       <div class="container">
-        <header class="section-header">
+        <header class="section-header reveal">
           <h2>Featured Projects</h2>
           <p>A quick look at some of our recent work.</p>
         </header>
-        <div id="home-projects-grid" class="grid-3">
+        <div id="home-projects-grid" class="grid-3 reveal-stagger">
           <!-- Filled by projects.js (from data/projects.json) -->
         </div>
         <div class="section-cta">
@@ -104,19 +190,20 @@
             cost, timelines, and scope.
           </p>
         </div>
-        <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+        <a href="contact.html" target="_blank" rel="noopener" class="btn btn-primary">Request a Quote</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> SolidBuild Construction. All rights reserved.</p>
+      <p>© <span id="year"></span> Rendelco Construction. All rights reserved.</p>
       <p class="footer-meta">Designed as a demo construction website structure.</p>
     </div>
   </footer>
 
   <script src="../assets/js/main.js"></script>
   <script src="../assets/js/projects.js"></script>
+  <script src="../assets/js/reveal.js"></script>
 </body>
 </html>

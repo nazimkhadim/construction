@@ -68,78 +68,92 @@
   padding: 0.4rem 0 3rem;
 }
 
-.about-projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.6rem;
+.about-showcase .projects-intro {
+  max-width: 620px;
+  margin-bottom: 1.8rem;
+  font-size: 0.96rem;
+  color: var(--color-muted);
 }
 
-.project-card {
+.about-showcase .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.about-showcase .project-card {
+  display: grid;
+  grid-template-columns: 1.4fr 2fr;
+  gap: 0;
   border-radius: var(--radius-lg);
   border: 1px solid rgba(148, 163, 184, 0.4);
   overflow: hidden;
-  background: radial-gradient(circle at top, rgba(148, 163, 184, 0.25), rgba(15, 23, 42, 0.98));
+  background: radial-gradient(circle at top, rgba(148, 163, 184, 0.2), rgba(15, 23, 42, 0.97));
   box-shadow: var(--shadow-soft);
 }
 
-.project-image {
-  position: relative;
-  overflow: hidden;
+.about-showcase .project-thumb {
+  min-height: 150px;
+  background-size: cover;
+  background-position: center;
 }
 
-.image-placeholder {
-  position: relative;
-  height: 170px;
-  display: flex;
-  align-items: flex-end;
-  padding: 0.9rem 1rem;
-  font-size: 0.9rem;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #f9fafb;
+.about-showcase .thumb-villa {
+  background-image: url("https://images.unsplash.com/photo-1600585154340-0ef3c08c0632?auto=format&fit=crop&w=1200&q=80");
 }
 
-.image-placeholder::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent 55%),
-    repeating-linear-gradient(135deg, rgba(15, 23, 42, 0.7) 0, rgba(15, 23, 42, 0.7) 2px, rgba(148, 163, 184, 0.15) 3px, rgba(148, 163, 184, 0.15) 4px);
-  opacity: 1;
+.about-showcase .thumb-apartments {
+  background-image: url("https://images.unsplash.com/photo-1502673530728-f79b4cab31b1?auto=format&fit=crop&w=1200&q=80");
 }
 
-.image-placeholder span {
-  position: relative;
-  z-index: 1;
+.about-showcase .thumb-office {
+  background-image: url("https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1200&q=80");
 }
 
-.image-residential {
-  background: url("https://images.unsplash.com/photo-1600585154340-0ef3c08c0632?auto=format&fit=crop&w=1200&q=80") center/cover no-repeat;
+.about-showcase .thumb-showroom {
+  background-image: url("https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1200&q=80");
 }
 
-.image-commercial {
-  background: url("https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80") center/cover no-repeat;
+.about-showcase .thumb-school {
+  background-image: url("https://images.unsplash.com/photo-1523059623039-a9ed027e7fad?auto=format&fit=crop&w=1200&q=80");
 }
 
-.image-infra {
-  background: url("https://images.unsplash.com/photo-1518704613850-ef7e9fc1e212?auto=format&fit=crop&w=1200&q=80") center/cover no-repeat;
+.about-showcase .thumb-hospital {
+  background-image: url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1200&q=80");
 }
 
-.project-body {
-  padding: 1rem 1.1rem 1.1rem;
+.about-showcase .thumb-road {
+  background-image: url("https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=1200&q=80");
 }
 
-.project-body h3 {
+.about-showcase .thumb-industrial {
+  background-image: url("https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80");
+}
+
+.about-showcase .project-content {
+  padding: 1rem 1.2rem 1.1rem;
+}
+
+.about-showcase .project-content h2 {
   margin: 0 0 0.4rem;
-  font-size: 1.02rem;
+  font-size: 1.05rem;
 }
 
-.project-body p {
+.about-showcase .project-content p {
   margin: 0;
-  font-size: 0.92rem;
+  font-size: 0.93rem;
   color: var(--color-muted);
+}
+
+.about-showcase .project-content p + p {
+  margin-top: 0.4rem;
+}
+
+.about-showcase .project-meta {
+  font-size: 0.86rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #e5e7eb;
 }
 
 @media (max-width: 900px) {
@@ -149,8 +163,8 @@
   .goals-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .about-projects-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .about-showcase .projects-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -158,7 +172,7 @@
   .goals-grid {
     grid-template-columns: minmax(0, 1fr);
   }
-  .about-projects-grid {
+  .about-showcase .project-card {
     grid-template-columns: minmax(0, 1fr);
   }
 }
