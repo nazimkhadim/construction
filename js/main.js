@@ -82,4 +82,21 @@
 
     goTo(0);
   }
+
+  // Footer: scroll-in effect when footer enters viewport
+  var footer = document.getElementById('site-footer');
+  if (footer) {
+    var footerYear = document.getElementById('footer-year');
+    if (footerYear) footerYear.textContent = new Date().getFullYear();
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          footer.classList.add('is-in-view');
+        }
+      });
+    }, { rootMargin: '0px', threshold: 0.15 });
+
+    observer.observe(footer);
+  }
 })();
